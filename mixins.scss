@@ -1,0 +1,21 @@
+//@mixin kbd-extra-colors-propertys($colors-map) {} //Create this mixin before import module when you want add some special colors style for element
+
+@mixin kbd-colors-propertys($colors-map) {
+    @include property-from-map($colors-map, background-color);
+    @include property-from-map($colors-map, color);
+    @if mixin-exists(kbd-extra-colors-propertys) {
+        @include kbd-extra-colors-propertys($colors-map);
+    }
+}
+
+@mixin kbd-colors($colors-map) {
+    kbd {
+        @include kbd-colors-propertys($colors-map);
+    }
+}
+
+@mixin class-kbd-colors($class, $colors-map) {
+    kbd.#{$class} {
+        @include kbd-colors-propertys($colors-map);
+    }
+}

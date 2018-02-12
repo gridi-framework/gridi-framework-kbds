@@ -1,0 +1,17 @@
+//Kbd
+$kbd-display: inline-block;
+$kbd-background-image: null !default;
+$kbd-background-position: null !default;
+$kbd-background-repeat: null !default;
+$kbd-background-color: get-color(grey, 200) !default;
+$kbd-background-attachment: null !default;
+$kbd-padding-top: $inline-background-elements-padding-top !default;
+$kbd-padding-bottom: $inline-background-elements-padding-bottom !default;
+$kbd-padding-left: $inline-background-elements-padding-left !default;
+$kbd-padding-right: $inline-background-elements-padding-right !default;
+$kbd-font-family: $document-monospace-font-family !default;
+//@mixin kbd-extra-style() {} //Create this mixin before import module when you want add some special style for element
+
+//kbd kbd
+$kbd-inside-kbd-font-weight: $bold-elements-font-weight !default;
+//@mixin kbd-inside-kbd-extra-style() {} //Create this mixin before import module when you want add some special style for element

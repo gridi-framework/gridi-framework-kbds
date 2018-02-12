@@ -1,0 +1,29 @@
+kbd {
+    display: $kbd-display;
+    @include background-shorthand((
+        image: $kbd-background-image,
+        position: $kbd-background-position,
+        repeat: $kbd-background-repeat,
+        color: $kbd-background-color,
+        attachment: $kbd-background-attachment,
+        make-shorthand: true
+    ));
+    @include padding-shorthand((
+        top: $kbd-padding-top, 
+        bottom: $kbd-padding-bottom, 
+        left: $kbd-padding-left, 
+        right: $kbd-padding-right
+    ));
+    font-family: $kbd-font-family;
+    @if mixin-exists(kbd-extra-style) {
+        @include kbd-extra-style();
+    }
+
+    kbd {
+        padding: 0;
+        font-weight: $kbd-inside-kbd-font-weight;
+        @if mixin-exists(kbd-inside-kbd-extra-style) {
+            @include kbd-inside-kbd-extra-style();
+        }
+    }
+}
